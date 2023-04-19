@@ -1,0 +1,10 @@
+.mainpage__container {
+    height: 100%;
+    background-color: #EFF2F5;
+    padding-top: 20px;
+}
+
+.middleContainer {
+    overflow-y: scroll;
+    height: 970px;
+}

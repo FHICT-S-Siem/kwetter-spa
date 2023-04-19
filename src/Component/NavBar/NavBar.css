@@ -1,0 +1,79 @@
+.navbar__main {
+    border-bottom: 1px solid #D8DBDE;
+}
+
+.navbar__leftbar {
+    display: flex;
+}
+
+.navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.navbar__tabs {
+    width: 120px;
+    height: 42px;
+}
+
+.navbar__tabs:active {
+    border-bottom: 3px solid #1B77F2;
+    color: #1B77F2;
+}
+
+.navbar__tabs:hover {
+    border-bottom: 3px solid #1b78f29f;
+    color: #1B77F2;
+
+}
+
+.navbar__tabs:focus {
+    border-bottom: 3px solid #1B77F2;
+    color: #1B77F2;
+
+}
+
+.navbar__righttab {
+    display: flex;
+}
+
+.navbar__rightimg {
+    margin-top: 15px;
+    margin-right: 10px;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.navbar__profilename {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.navbar__barContent {
+    height: 54px;
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.navbar_logo{
+    margin: 8px 10px 8px 16px;
+}
+
+.navbar__img {
+    margin:15px 10px;
+}
+
+.navbar__searchBar {
+    height: 30px;
+    width: 190px;
+    margin-top: 10px;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
