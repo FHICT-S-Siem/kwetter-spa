@@ -22,7 +22,6 @@ class Layout extends Component {
                     <Grid item xs={6} className='middleContainer'>
                         <UploadPost/>
                         <PostContainer/>
-                        
                     </Grid>
                     <Grid item xs={3}>
                         <RightSide/>
