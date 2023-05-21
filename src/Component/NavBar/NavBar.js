@@ -7,8 +7,6 @@ import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import { useAuth0 } from '@auth0/auth0-react';
 
-
-// on logout button click log out of auth0
 function NavBar() {
     const { user, isAuthenticated, logout } = useAuth0();
     return (

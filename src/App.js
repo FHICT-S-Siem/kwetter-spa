@@ -1,19 +1,18 @@
-import './App.css';
+// Components
 import Layout from './Component/NavBar/MainPage/Layout';
 import NavBar from './Component/NavBar/NavBar';
+
 // styles
 import "./App.css";
 
-// fontawesome
+// Auth0
 import { useAuth0 } from '@auth0/auth0-react';
-// import { Router, Route, Switch } from "react-router-dom";
-// initFontAwesome();
 
 const App = () => {
   const { isLoading, error, isAuthenticated, loginWithRedirect, user, getAccessTokenSilently } = useAuth0();
 
   if (error) {
-    return <div>Oops... {error.message}</div>;
+    return (<div>Oops... {error.message}</div>);
   }
 
   if (isLoading) {
@@ -33,6 +32,32 @@ const App = () => {
     getAccessTokenSilently().then(token => {
       console.log(token)
       console.log(user)
+
+      const userdata = { 
+        id: 1,
+        name: user.name,
+        email: user.email,
+        picture: user.picture,
+        nickname: user.nickname,
+        sub: user.sub,
+        // updated_at: user.updated_at,
+      }
+
+      return fetch('http://localhost:8081/api/v1/user', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userdata),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          // Handle data
+        })
+        .catch((err) => {
+          console.log(err.message);
+        });
     })
   }
 
