@@ -19,17 +19,17 @@ const App = () => {
     return (<h1>Loading...</h1>)
   }
 
-  // getAccessTokenSilently() in useEffect
   if (!isAuthenticated) {
     loginWithRedirect()
-  } else {
+  }  else {
     getAccessTokenSilently().then(token => {
       console.log(token)
       console.log(user)
       const userdata = { 
         userState: "unblocked",
+        role: "user",
         name: user.name,
-        email: user.email,
+        email: user.name,
         picture: user.picture,
         nickname: user.nickname,
         sub: user.sub,
@@ -47,7 +47,6 @@ const App = () => {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-          // Handle data
         })
         .catch((err) => {
           console.log(err.message);
