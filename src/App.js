@@ -16,34 +16,28 @@ const App = () => {
   }
 
   if (isLoading) {
-    return (
-    <div id="app" className="d-flex flex-column h-100">
-      <div className="flex-grow-1 mt-5">
-        <h1>Loading...</h1>
-        
-      </div>
-    </div>
-    )
+    return (<h1>Loading...</h1>)
   }
 
+  // getAccessTokenSilently() in useEffect
   if (!isAuthenticated) {
     loginWithRedirect()
   } else {
     getAccessTokenSilently().then(token => {
       console.log(token)
       console.log(user)
-
       const userdata = { 
-        id: 1,
+        userState: "unblocked",
         name: user.name,
         email: user.email,
         picture: user.picture,
         nickname: user.nickname,
         sub: user.sub,
-        // updated_at: user.updated_at,
+        updated_at: user.updated_at,
       }
-
-      return fetch('http://localhost:8081/api/v1/user', {
+      console.log(userdata)
+      
+      return fetch('http://localhost:8081/api/v1/auth', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',

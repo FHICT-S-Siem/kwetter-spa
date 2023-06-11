@@ -10,7 +10,8 @@ class LeftSide extends Component {
     render() { 
         return ( 
             <div>
-                Left side
+                <button>Download user data</button>
+                <button>Delete user data</button>
             </div>
          );
     }
