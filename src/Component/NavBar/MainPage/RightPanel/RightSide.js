@@ -8,7 +8,7 @@ class RightSide extends Component {
     render() { 
         return ( 
             <div>
-                Right side
+                
             </div>
          );
     }

@@ -3,7 +3,7 @@ import "./Mainpage.css"
 import { Grid } from '@mui/material';
 import LeftSide from './LeftSidePanel/LeftSide';
 import RightSide from './RightPanel/RightSide';
-import UploadPost from './MiddlePanel/UploadPost/UploadPost';
+import UploadPost from './MiddlePanel/PostContainer/UploadPost';
 import PostContainer from './MiddlePanel/PostContainer/PostContainer';
 
 class Layout extends Component {
@@ -20,7 +20,7 @@ class Layout extends Component {
                         <LeftSide/>
                     </Grid>
                     <Grid item xs={6} className='middleContainer'>
-                        <UploadPost/>
+                        {/* <UploadPost/> */}
                         <PostContainer/>
                     </Grid>
                     <Grid item xs={3}>
