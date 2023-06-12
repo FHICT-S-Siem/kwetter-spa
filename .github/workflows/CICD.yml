@@ -25,11 +25,11 @@ jobs:
         run: |
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
           
-      - name: Build kwetterspa docker image
-        run: docker build . --file Dockerfile -t "siem228/kwetter"
-        
-      - name: Push kwetterspa docker image
-        run: docker push "siem228/kwetter:latest"
+      - name: Build user service docker image
+        run: docker build . --file Dockerfile -t "$DOCKER_USERNAME/$PRODUCT_REPO_NAME:latest"
+      
+      - name: Push user service docker image
+        run: docker push "$DOCKER_USERNAME/$PRODUCT_REPO_NAME:latest"
         
   deployment:
       needs: [create-kwetterspa-image]
