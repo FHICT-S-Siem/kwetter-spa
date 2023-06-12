@@ -26,7 +26,7 @@ jobs:
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
           
       - name: Build kwetterspa docker image
-        run: docker build . --file Dockerfile -t siem228/kwetter .
+        run: docker build . --file Dockerfile -t siem228/kwetter
         
       - name: Push kwetterspa docker image
         run: docker push siem228/kwetter:latest
