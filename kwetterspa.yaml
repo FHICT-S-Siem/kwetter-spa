@@ -28,6 +28,7 @@ kind: Service
 metadata:
   name: kwetterspa-srv
 spec:
+  type: LoadBalancer
   selector:
     app: kwetterspa
   ports:
