@@ -34,7 +34,7 @@ function NavBar() {
                             <NotificationsOutlinedIcon alt='notifications'/>
                         </div>                     
                     </div>
-                </Grid>
+                </Grid>                
                 <Grid item xs ={3}>
                     <div className='navbar__right'>
                         <div className='navbar__righttab'>
@@ -43,10 +43,7 @@ function NavBar() {
                             <div className='navbar__profilename'>{user.nickname}</div>
                             <button className='navbar__logoutbtn' onClick={() => logout({ returnTo: window.location.origin })}>Log out</button>
                         </div>
-                    
-                            
                     </div>  
-                  
                 </Grid>
             </Grid>    
         </div> 
